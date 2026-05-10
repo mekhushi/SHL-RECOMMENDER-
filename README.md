@@ -3,7 +3,7 @@
 This project provides a FastAPI service (`/chat` and `/health`) that acts as a conversational agent to recommend SHL Individual Test Solutions based on user needs.
 
 ## Approach & Design Choices
-
+ 
 ### Tech Stack
 - **FastAPI**: Used for its speed, simplicity, and built-in support for Pydantic validation. This ensures the output matches the required schema perfectly.
 - **Groq API**: Selected for ultra-fast, low-latency inference. We use the `llama-3.3-70b-versatile` model, which excels at structured JSON output and instruction following.
