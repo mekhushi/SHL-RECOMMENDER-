@@ -4,7 +4,7 @@ This project provides a FastAPI service (`/chat` and `/health`) that acts as a c
 
 ## Approach & Design Choices
  
-### Tech Stack
+### Tech Stack 
 - **FastAPI**: Used for its speed, simplicity, and built-in support for Pydantic validation. This ensures the output matches the required schema perfectly.
 - **Groq API**: Selected for ultra-fast, low-latency inference. We use the `llama-3.3-70b-versatile` model, which excels at structured JSON output and instruction following.
 - **Python-dotenv**: For clean environment variable management.
