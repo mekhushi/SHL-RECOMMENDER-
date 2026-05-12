@@ -14,7 +14,7 @@ Rather than using an unpredictable ReAct loop (which can hallucinate or get stuc
 1. **Query Generation (Routing)**: The agent analyzes the full conversation transcript and determines if it needs to search the catalog. If yes, it emits a highly targeted keyword search query.
 2. **Final Generation**: If a search was triggered, a local `CatalogManager` scores and retrieves the top 15 matching assessments. The retrieved context, along with strict JSON schema instructions, is passed to the main model to formulate the user-facing reply and fill the structured `recommendations` list.
 
-### Retrieval Setup
+### Retrieval Setup 
 Given the catalog size (~377 items), a heavyweight vector database (like Chroma or FAISS) introduces unnecessary latency and dependency bloat. Instead, I implemented a lightweight, fast, in-memory heuristic matching engine (`data_loader.py`). It scores assessments based on keyword overlap with the generated search query across the assessment name, description, job levels, and metadata keys. This is extremely robust and avoids the cold-start and memory overhead of dense retrieval models while maintaining high precision.
 
 ### Prompt Design
