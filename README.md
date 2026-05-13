@@ -1,5 +1,5 @@
 # SHL Conversational Assessment Recommender
-
+ 
 This project provides a FastAPI service (`/chat` and `/health`) that acts as a conversational agent to recommend SHL Individual Test Solutions based on user needs.
 
 ## Approach & Design Choices
